@@ -36,10 +36,10 @@
       entrada.value = "";
 
       try {
-        const resposta = await fetch("http://localhost:5000/responder", {
+        const resposta = await fetch("/responder", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ mensagem: texto })  // chave corrigida para "mensagem"
+          body: JSON.stringify({ mensagem: texto })
         });
 
         if (!resposta.ok) throw new Error("Erro na resposta do servidor");
