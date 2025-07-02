@@ -1,18 +1,18 @@
 from vetor import get_model_index_textos  # Assumo que retorna model, index, textos
-import openai
+from openai import OpenAI
 import numpy as np
 import os
 from memoria import salvar_na_memoria
 
-# Configurar chave OpenAI via variável de ambiente
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# Configura cliente da OpenAI (nova API v1)
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 def obter_embedding_openai(texto):
-    response = openai.Embedding.create(
+    response = client.embeddings.create(
         input=texto.lower(),
         model="text-embedding-ada-002"
     )
-    return response['data'][0]['embedding']
+    return response.data[0].embedding
 
 def responder_lyka(pergunta):
     model, index, textos = get_model_index_textos()
@@ -51,8 +51,8 @@ Você é Lyka, uma inteligência artificial treinada exclusivamente para auxilia
 """
 
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4o",  # Pode mudar para outro se desejar
+        response = client.chat.completions.create(
+            model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=1000,
