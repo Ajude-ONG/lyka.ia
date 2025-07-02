@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-import openai
+from openai import OpenAI
 import numpy as np
-import os  # ✅ Importa os.environ para ler variável da chave
+import os
 from vetor import get_model_index_textos
 from responder import fallback_palavras_chave, obter_embedding_openai
 
@@ -10,8 +10,8 @@ from responder import fallback_palavras_chave, obter_embedding_openai
 app = Flask(__name__)
 CORS(app)
 
-# ✅ Pega a chave da OpenAI do ambiente (configure na Render)
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# Inicializa o cliente da nova API da OpenAI
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Função principal com busca vetorial + fallback seguro
 def responder_pergunta(pergunta):
@@ -48,13 +48,13 @@ Você é Lyka, uma inteligência artificial treinada exclusivamente para auxilia
 """
 
     try:
-        resposta = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=1000
         )
-        return resposta.choices[0].message.content.strip()
+        return response.choices[0].message.content.strip()
 
     except Exception as e:
         print(f"[ERRO] Falha na API OpenAI: {e}")
@@ -68,12 +68,12 @@ def chat():
     resposta = responder_pergunta(pergunta)
     return jsonify({"resposta": resposta})
 
-# ✅ Rota raiz para teste no navegador
+# Rota raiz para teste no navegador
 @app.route("/", methods=["GET"])
 def home():
     return send_file("index.html")
 
-# ⚠️ Sem debug para produção
+# Inicializa o servidor Flask
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # ✅ Corrigido para usar a porta do Render
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
