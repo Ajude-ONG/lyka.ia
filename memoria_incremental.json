@@ -1,0 +1,209 @@
+{
+  "plb": [
+    {
+      "perguntas": [
+        "O que é PLB?",
+        "Para que serve o PLB?",
+        "Defina PLB",
+        "Como funciona um PLB?"
+      ],
+      "resposta": "O PLB (Personal Locator Beacon) é um localizador pessoal usado por indivíduos para enviar sinais de emergência via satélite, facilitando o resgate em situações de perigo."
+    }
+  ],
+  "memoria": [
+    {
+      "perguntas": [
+        "Qual a importância do olfato em missões de busca aérea?",
+        "Por que o olfato é útil em buscas de aeronaves?",
+        "Que cheiros podem ajudar a localizar destroços?",
+        "Como o olfato pode indicar acidentes aéreos?",
+        "O que o cheiro pode revelar em missões SAR?"
+      ],
+      "resposta": "O olfato pode identificar odores de combustíveis como querosene (JET-A) ou gasolina de aviação (AVGAS), cheiro de óleo queimado, fumaça, materiais derretidos e, em casos mais antigos, odor de decomposição. Esses sinais são importantes em locais onde não há visibilidade ou contato visual com a aeronave."
+    },
+    {
+      "perguntas": [
+        "Quais são as frequências padrão de um ELT?",
+        "Em quais frequências o ELT transmite?",
+        "Qual frequência é usada pelo ELT em emergências?",
+        "Um ELT opera em qual banda de rádio?",
+        "O ELT transmite em 406 MHz?"
+      ],
+      "resposta": "O ELT transmite sinais de emergência principalmente em 406 MHz (frequência monitorada por satélite) e 121.5 MHz (emergência aeronáutica convencional). Alguns modelos antigos também podem operar em 243.0 MHz, usada por forças armadas."
+    },
+    {
+      "perguntas": [
+        "O que diferencia um PLB de um ELT?",
+        "Qual a diferença entre ELT e PLB?",
+        "PLB e ELT são a mesma coisa?",
+        "Quais as principais diferenças entre PLB e ELT?",
+        "Quando usar PLB em vez de ELT?"
+      ],
+      "resposta": "O ELT é fixado em aeronaves e ativa automaticamente por impacto. Já o PLB (Personal Locator Beacon) é um localizador portátil, acionado manualmente por pessoas em situação de emergência. O PLB pode ser usado fora do contexto da aviação, como em trilhas ou expedições."
+    },
+    {
+      "perguntas": [
+        "Um PLB é obrigatório em aeronaves civis?",
+        "A legislação exige PLB em voos civis?",
+        "Aeronaves civis precisam ter PLB?",
+        "O PLB é exigido pela ANAC?",
+        "Todo voo civil deve ter PLB?"
+      ],
+      "resposta": "O uso do PLB não é obrigatório para todas as aeronaves civis no Brasil. A exigência depende da regulamentação específica do tipo de voo, rota e legislação da autoridade aeronáutica. O ELT, sim, é obrigatório em diversas operações aéreas."
+    },
+    {
+      "perguntas": [
+        "Como funcionam as triangulações de sinal em busca e salvamento?",
+        "O que é triangulação de sinal?",
+        "Como a triangulação localiza um sinal de emergência?",
+        "Triangulação é usada para encontrar ELT?",
+        "Como identificar localização com sinal de rádio?"
+      ],
+      "resposta": "A triangulação é feita captando o mesmo sinal por diferentes receptores (aeronaves, torres ou satélites). Com base no tempo de chegada e intensidade do sinal em diferentes pontos, é possível calcular a posição aproximada da fonte, como um ELT ou PLB."
+    },
+    {
+      "perguntas": [
+        "Por que é necessário usar drones em buscas por desaparecidos?",
+        "Qual o papel dos drones em operações de busca e salvamento?",
+        "Drones ajudam na localização de aeronaves?",
+        "Para que os drones são utilizados em missões SAR?",
+        "Como os drones melhoram a eficiência em buscas?"
+      ],
+      "resposta": "Drones são usados para alcançar áreas de difícil acesso, realizar varreduras aéreas de baixo custo, captar imagens térmicas e detectar sinais visuais ou térmicos de vítimas. Eles aumentam a precisão e a segurança da equipe em campo."
+    },
+    {
+      "perguntas": [
+        "O que o termo NTAP significa?",
+        "Explique a sigla NTAP",
+        "NTAP é o quê?",
+        "O que quer dizer NTAP na aviação?",
+        "Qual o significado de NTAP?"
+      ],
+      "resposta": "NTAP significa Notificação de Tráfego Aéreo Potencial. É um alerta gerado por sistemas de vigilância quando há indícios de que uma aeronave pode estar em emergência, servindo como um disparador para ações de busca e investigação."
+    },
+    {
+      "perguntas": [
+        "Qual a função do SALVAERO em uma missão de busca?",
+        "O que é SALVAERO?",
+        "Como o SALVAERO atua em desaparecimentos aéreos?",
+        "Quem é responsável pelas operações SAR no Brasil?",
+        "Qual a importância do SALVAERO em buscas?"
+      ],
+      "resposta": "O SALVAERO é o órgão da Força Aérea Brasileira responsável por coordenar missões de busca e salvamento aéreo (SAR) no país. Ele recebe alertas, planeja rotas de busca, mobiliza recursos e coordena as ações com outras agências."
+    },
+    {
+      "perguntas": [
+        "Que cheiros são típicos de acidentes com aeronaves?",
+        "Quais odores indicam queda de avião?",
+        "Como o olfato ajuda a identificar acidentes aéreos?",
+        "O que pode ser sentido pelo cheiro em locais de acidente?",
+        "Quais sinais olfativos revelam um possível impacto aéreo?"
+      ],
+      "resposta": "Os cheiros típicos incluem querosene (JET-A), gasolina de aviação (AVGAS), fumaça recente, óleo queimado, plástico derretido e, em casos antigos, odor de decomposição. Esses odores auxiliam na localização de destroços."
+    },
+    {
+      "perguntas": [
+        "Qual a diferença entre um desaparecimento civil e um militar?",
+        "Desaparecimento civil e militar são tratados igual?",
+        "Como se diferencia uma missão de busca civil e militar?",
+        "Quais as diferenças entre um caso civil e um caso militar?",
+        "O que muda na investigação de um sumiço militar?"
+      ],
+      "resposta": "Desaparecimentos civis são tratados por órgãos civis como a ANAC, enquanto os militares envolvem as Forças Armadas. O protocolo, sigilo e autoridades responsáveis podem variar. Casos militares podem envolver restrições de informação e procedimentos específicos."
+    },
+    {
+      "perguntas": [
+        "O que são SIGMETs?",
+        "Para que servem os SIGMETs na aviação?",
+        "Quais informações estão em um SIGMET?"
+      ],
+      "resposta": "SIGMET (Significant Meteorological Information) é uma mensagem emitida para alertar pilotos sobre condições meteorológicas perigosas como tempestades severas, turbulência, cinzas vulcânicas ou gelo em voo. Essas informações são essenciais para segurança de voo e planejamento da missão de busca."
+    },
+    {
+      "perguntas": [
+        "Como calcular a última posição conhecida da aeronave?",
+        "O que é a última posição conhecida?",
+        "Como se determina a LKP de um voo?"
+      ],
+      "resposta": "A última posição conhecida (LKP - Last Known Position) é determinada por dados como radar, ADS-B, comunicação por rádio, rastreadores via satélite ou relatos de testemunhas. Essa posição serve como ponto de partida para o planejamento da busca aérea."
+    },
+    {
+      "perguntas": [
+        "O que o termo ADS-B representa?",
+        "Para que serve o ADS-B na aviação?",
+        "Como o ADS-B auxilia em buscas aéreas?"
+      ],
+      "resposta": "ADS-B (Automatic Dependent Surveillance–Broadcast) é uma tecnologia que transmite automaticamente a posição, velocidade e outros dados da aeronave para controladores de tráfego e outras aeronaves. Ele auxilia na localização precisa em operações de busca e resgate."
+     },
+     {
+      "perguntas": [
+        "Quais EPIs são obrigatórios em uma missão SAR?",
+        "Que equipamentos de proteção individual devem ser usados em buscas?",
+        "Qual EPI é usado em locais de acidente aéreo?",
+        "É necessário usar luvas e capacete em missões de resgate?",
+        "Quais são os itens de segurança em operações de busca e salvamento?"
+      ],
+      "resposta": "Os EPIs obrigatórios incluem luvas resistentes, botas com solado isolante, capacetes de impacto, respiradores, óculos de proteção e coletes de alta visibilidade. Em alguns casos, roupas impermeáveis e proteção biológica também são recomendadas."
+    },
+    {
+      "perguntas": [
+        "O que significa a sigla METAR?",
+        "Explique o que é METAR na aviação",
+        "Para que serve o METAR?",
+        "Como interpretar um relatório METAR?",
+        "METAR é usado em buscas aéreas?"
+      ],
+      "resposta": "METAR é um relatório meteorológico aeronáutico que informa condições do tempo em aeroportos. Ele inclui dados como visibilidade, vento, temperatura, pressão atmosférica e fenômenos meteorológicos importantes para o planejamento da busca aérea."
+    },
+    {
+      "perguntas": [
+        "O que significa TAF?",
+        "Explique a sigla TAF na aviação",
+        "Para que serve um TAF?",
+        "Como interpretar um TAF?",
+        "TAF é útil em missões de busca aérea?"
+      ],
+      "resposta": "TAF (Terminal Aerodrome Forecast) é uma previsão meteorológica específica para aeroportos. Informa condições previstas como visibilidade, ventos, nuvens e fenômenos como chuva ou tempestade, sendo essencial para planejamento de missões aéreas."
+    },
+    {
+      "perguntas": [
+        "Em que momento a busca deve ser suspensa?",
+        "Quando se considera encerrar uma missão de busca aérea?",
+        "Quais critérios definem o fim de uma operação SAR?",
+        "Quando parar uma operação de busca por desaparecidos?",
+        "A busca pode ser suspensa antes de encontrar a aeronave?"
+      ],
+      "resposta": "A busca pode ser suspensa após esgotadas todas as possibilidades de localização, análise de dados, ausência de novos indícios e conforme protocolos oficiais. A decisão é tomada por autoridades competentes, considerando segurança e recursos disponíveis."
+    },
+    {
+      "perguntas": [
+        "Que tipo de vestígios visuais indicam um acidente?",
+        "O que pode ser visto após a queda de uma aeronave?",
+        "Que sinais visuais podem indicar o local do impacto?",
+        "Que objetos identificar no terreno em uma missão SAR?",
+        "Que pistas visuais ajudam a localizar aeronaves?"
+      ],
+      "resposta": "Destroços metálicos, partes da fuselagem, manchas de combustível, roupas, bagagens, sinalizadores, fragmentos no solo e alterações na vegetação (como árvores partidas) são indícios visuais comuns em áreas de queda de aeronaves."
+    },
+    {
+      "perguntas": [
+        "O que significa blackout situacional no contexto aéreo?",
+        "Explique o que é blackout situacional para pilotos",
+        "O que causa blackout situacional?",
+        "Quais os riscos do blackout situacional?",
+        "Como o blackout situacional afeta a segurança do voo?"
+      ],
+      "resposta": "Blackout situacional é a perda de consciência situacional por parte do piloto, que pode deixar de perceber a posição da aeronave, altitude ou direção. Pode ser causado por sobrecarga cognitiva, fadiga, estresse ou desorientação espacial."
+    },
+    {
+      "perguntas": [
+        "Como identificar uma chamada de socorro por rádio?",
+        "O que indica um pedido de socorro por rádio?",
+        "Qual é o protocolo para Mayday?",
+        "Como soa uma chamada Mayday?",
+        "Que sinais de rádio indicam emergência aérea?"
+      ],
+      "resposta": "Chamadas de socorro incluem o termo 'Mayday' repetido três vezes, seguidas de informações sobre a situação. Também podem envolver mensagens urgentes como 'Pan-Pan'. Essas transmissões devem ser levadas a sério e ativam protocolos de emergência."
+    }
+  ]
+}
