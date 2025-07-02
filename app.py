@@ -71,7 +71,7 @@ def chat():
 # ✅ Rota raiz para teste no navegador
 @app.route("/", methods=["GET"])
 def home():
-    return "Lyka está online e aguardando mensagens POST em /responder"
+    return send_file("index.html")
 
 # ⚠️ Sem debug para produção
 if __name__ == "__main__":
