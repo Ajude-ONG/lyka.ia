@@ -68,6 +68,11 @@ def chat():
     resposta = responder_pergunta(pergunta)
     return jsonify({"resposta": resposta})
 
+# ✅ Rota raiz para teste no navegador
+@app.route("/", methods=["GET"])
+def home():
+    return "Lyka está online e aguardando mensagens POST em /responder"
+
 # ⚠️ Sem debug para produção
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # ✅ Corrigido para usar a porta do Render
