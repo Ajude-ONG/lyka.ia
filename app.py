@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 from openai import OpenAI
 import numpy as np
@@ -72,6 +72,11 @@ def chat():
 @app.route("/", methods=["GET"])
 def home():
     return send_file("index.html")
+
+# ✅ Nova rota para exibir o mapa
+@app.route("/mapa.html", methods=["GET"])
+def mapa():
+    return send_file("mapa.html")
 
 # Inicializa o servidor Flask
 if __name__ == "__main__":
