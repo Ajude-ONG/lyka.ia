@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa com Busca por Endereço</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 90vh; width: 100%; }
+    #searchBox { padding: 10px; }
+    input[type="text"] { width: 80%; padding: 8px; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <div id="searchBox">
+    <input type="text" id="endereco" placeholder="Digite um endereço completo..." />
+    <button onclick="buscarEndereco()">Buscar</button>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var mapa = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mapa);
+
+    var marcador = null;
+
+    function buscarEndereco() {
+      var endereco = document.getElementById('endereco').value;
+      if (!endereco) return alert("Digite um endereço válido.");
+
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(endereco)}`, {
+        headers: {
+          'User-Agent': 'LykaPolicialBot/1.0 (contato@lyka.app.br)'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.length === 0) return alert("Endereço não encontrado.");
+
+          var lat = parseFloat(data[0].lat);
+          var lon = parseFloat(data[0].lon);
+
+          if (marcador) mapa.removeLayer(marcador);
+
+          marcador = L.marker([lat, lon]).addTo(mapa)
+            .bindPopup(`📍 ${data[0].display_name}`).openPopup();
+
+          mapa.setView([lat, lon], 17);
+        })
+        .catch(err => {
+          console.error(err);
+          alert("Erro ao buscar endereço.");
+        });
+    }
+
+    // Clique no mapa para mostrar endereço e coordenadas
+    mapa.on('click', function(e) {
+      var lat = e.latlng.lat.toFixed(6);
+      var lon = e.latlng.lng.toFixed(6);
+
+      fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`, {
+        headers: {
+          'User-Agent': 'LykaPolicialBot/1.0 (contato@lyka.app.br)'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          var endereco = data.display_name || "Endereço não encontrado";
+          L.popup()
+            .setLatLng(e.latlng)
+            .setContent(`📍 <strong>${endereco}</strong><br>Lat: ${lat}<br>Lon: ${lon}`)
+            .openOn(mapa);
+        })
+        .catch(err => {
+          console.error(err);
+          L.popup()
+            .setLatLng(e.latlng)
+            .setContent(`📍 Lat: ${lat}<br>Lon: ${lon}<br><em>(Endereço não disponível)</em>`)
+            .openOn(mapa);
+        });
+    });
+  </script>
+</body>
+</html>
