@@ -76,7 +76,7 @@ def home():
 # ✅ Nova rota para exibir o mapa
 @app.route("/mapa.html", methods=["GET"])
 def mapa():
-    return send_file("mapa.html")
+    return send_file("templates/mapa.html")
 
 # Inicializa o servidor Flask
 if __name__ == "__main__":
